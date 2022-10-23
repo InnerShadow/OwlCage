@@ -1,0 +1,29 @@
+﻿  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_stdlib.cpp
+  binary_to_compressed_c.cpp
+  imgui_freetype.cpp
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\GUI\misc\freetype\imgui_freetype.cpp(38,10): fatal error C1083: Не удается открыть файл включение: ft2build.h: No such file or directory,
+  OwlCage.cpp
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\includs.hpp(1,9): warning C4068: неизвестная прагма "omce"
+  Constant.cpp
+  Cosine.cpp
+  Exponential.cpp
+  Function.cpp
+  FunctionCombine.cpp
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\SimplestFunctions\FunctionCombine.cpp(47,39): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\SimplestFunctions\FunctionCombine.cpp(48,38): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\SimplestFunctions\FunctionCombine.cpp(108,24): warning C4101: coefficient: неиспользованная локальная переменная
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\SimplestFunctions\FunctionCombine.cpp(115,24): warning C4101: coefficient: неиспользованная локальная переменная
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\SimplestFunctions\FunctionCombine.cpp(122,24): warning C4101: coefficient: неиспользованная локальная переменная
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\SimplestFunctions\FunctionCombine.cpp(132,24): warning C4101: coefficient: неиспользованная локальная переменная
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\SimplestFunctions\FunctionCombine.cpp(142,24): warning C4101: coefficient: неиспользованная локальная переменная
+  Logorithmic.cpp
+  Power.cpp
+  Sine.cpp
+  Создание кода...
