@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -78,10 +78,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\GUI;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\misha\source\repos\OwlCage\OwlCage\vcpkg\packages\opengl_x86-windows\include;C:\Users\misha\source\repos\OwlCage\OwlCage\vcpkg\packages\glfw3_x86-windows\include;C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\GUI;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgInstalledDir>
+    </VcpkgInstalledDir>
+    <VcpkgUseStatic>false</VcpkgUseStatic>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -118,10 +123,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\misha\source\repos\OwlCage\OwlCage\vcpkg\packages\opengl_x86-windows\include;C:\Users\misha\source\repos\OwlCage\OwlCage\vcpkg\packages\glfw3_x86-windows\include;imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\misha\source\repos\OwlCage\OwlCage\vcpkg\packages\opengl_x86-windows\lib;C:\Users\misha\source\repos\OwlCage\OwlCage\vcpkg\packages\glfw3_x86-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -141,16 +148,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GUI\backends\imgui_impl_dx11.cpp" />
-    <ClCompile Include="GUI\backends\imgui_impl_win32.cpp" />
-    <ClCompile Include="GUI\imgui.cpp" />
-    <ClCompile Include="GUI\imgui_demo.cpp" />
-    <ClCompile Include="GUI\imgui_draw.cpp" />
-    <ClCompile Include="GUI\imgui_tables.cpp" />
-    <ClCompile Include="GUI\imgui_widgets.cpp" />
-    <ClCompile Include="GUI\misc\cpp\imgui_stdlib.cpp" />
-    <ClCompile Include="GUI\misc\fonts\binary_to_compressed_c.cpp" />
-    <ClCompile Include="GUI\misc\freetype\imgui_freetype.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
     <ClCompile Include="OwlCage.cpp" />
     <ClCompile Include="SimplestFunctions\Constant.cpp" />
     <ClCompile Include="SimplestFunctions\Cosine.cpp" />
@@ -162,17 +166,16 @@
     <ClCompile Include="SimplestFunctions\Sine.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GUI\backends\imgui_impl_dx11.h" />
-    <ClInclude Include="GUI\backends\imgui_impl_win32.h" />
-    <ClInclude Include="GUI\imconfig.h" />
-    <ClInclude Include="GUI\imgui.h" />
-    <ClInclude Include="GUI\imgui_internal.h" />
-    <ClInclude Include="GUI\imstb_rectpack.h" />
-    <ClInclude Include="GUI\imstb_textedit.h" />
-    <ClInclude Include="GUI\imstb_truetype.h" />
-    <ClInclude Include="GUI\misc\cpp\imgui_stdlib.h" />
-    <ClInclude Include="GUI\misc\freetype\imgui_freetype.h" />
-    <ClInclude Include="GUI\misc\single_file\imgui_single_file.h" />
+    <ClInclude Include="..\imgui\imconfig.h" />
+    <ClInclude Include="imguiH\imconfig.h" />
+    <ClInclude Include="imguiH\imgui.h" />
+    <ClInclude Include="imguiH\imgui_impl_glfw.h" />
+    <ClInclude Include="imguiH\imgui_impl_opengl3.h" />
+    <ClInclude Include="imguiH\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="imguiH\imgui_internal.h" />
+    <ClInclude Include="imguiH\imstb_rectpack.h" />
+    <ClInclude Include="imguiH\imstb_textedit.h" />
+    <ClInclude Include="imguiH\imstb_truetype.h" />
     <ClInclude Include="includs.hpp" />
     <ClInclude Include="SimplestFunctions\Constant.hpp" />
     <ClInclude Include="SimplestFunctions\Cosine.hpp" />
