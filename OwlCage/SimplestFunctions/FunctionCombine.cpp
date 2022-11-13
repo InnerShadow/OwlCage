@@ -168,6 +168,9 @@ Function* FunctionCombine::Getdiff() const {
         throw new std::runtime_error("Function does not exist!");
         return new Constant(0);
     }
+    if (NumOfFunctions == 1) {
+        return functions.at(0)->Getdiff();
+    }
 
     FunctionCombine* FinalDiff = new FunctionCombine();
 
@@ -303,15 +306,14 @@ Function* FunctionCombine::Getdiff() const {
 
 double FunctionCombine::Count(double x) const {
 
-    //TODO: Fix This thing
-
     if(!NumOfOperators){
         return functions.at(0)->Count(x);
+
     }
 
     double value = functions.at(0)->Count(x);
     for(int i = 0; i < NumOfFunctions - 1; i++){
-        std::cout << "Val: " << value << " i: " << i << std::endl;
+        //std::cout << "Val: " << value << " i: " << i << std::endl;
         if(operations.at(i) == "+" || operations.at(i) == "-"){
             if(operations.at(i) == "+"){
                 value += functions.at(i + 1)->Count(x);

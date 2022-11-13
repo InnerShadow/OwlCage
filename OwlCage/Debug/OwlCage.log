@@ -1,0 +1,3 @@
+﻿  MainFrame.cpp
+C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\GUI\MainFrame.cpp(70,24): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+  OwlCage.vcxproj -> C:\Users\misha\source\repos\OwlCage\OwlCage\Debug\OwlCage.exe

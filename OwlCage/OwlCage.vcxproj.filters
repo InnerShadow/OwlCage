@@ -42,6 +42,9 @@
     <ClCompile Include="SimplestFunctions\Sine.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="GUI\MainFrame.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
     <ClCompile Include="imgui\imgui.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -61,6 +64,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_impl_opengl3.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\Graphics.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,31 +101,10 @@
     <ClInclude Include="..\imgui\imconfig.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="imguiH\imconfig.h">
+    <ClInclude Include="GUI\MainFrame.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="imguiH\imgui.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="imguiH\imgui_impl_glfw.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="imguiH\imgui_internal.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="imguiH\imstb_rectpack.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="imguiH\imstb_textedit.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="imguiH\imstb_truetype.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="imguiH\imgui_impl_opengl3.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="imguiH\imgui_impl_opengl3_loader.h">
+    <ClInclude Include="GUI\Graphics.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

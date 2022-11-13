@@ -94,10 +94,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>imgui;C:\Users\misha\source\repos\OwlCage\OwlCage\OwlCage\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,13 +151,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="imgui\imgui.cpp" />
-    <ClCompile Include="imgui\imgui_demo.cpp" />
-    <ClCompile Include="imgui\imgui_draw.cpp" />
-    <ClCompile Include="imgui\imgui_impl_glfw.cpp" />
-    <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="imgui\imgui_tables.cpp" />
-    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="GUI\Graphics.cpp" />
+    <ClCompile Include="GUI\MainFrame.cpp" />
     <ClCompile Include="OwlCage.cpp" />
     <ClCompile Include="SimplestFunctions\Constant.cpp" />
     <ClCompile Include="SimplestFunctions\Cosine.cpp" />
@@ -167,15 +165,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\imgui\imconfig.h" />
-    <ClInclude Include="imguiH\imconfig.h" />
-    <ClInclude Include="imguiH\imgui.h" />
-    <ClInclude Include="imguiH\imgui_impl_glfw.h" />
-    <ClInclude Include="imguiH\imgui_impl_opengl3.h" />
-    <ClInclude Include="imguiH\imgui_impl_opengl3_loader.h" />
-    <ClInclude Include="imguiH\imgui_internal.h" />
-    <ClInclude Include="imguiH\imstb_rectpack.h" />
-    <ClInclude Include="imguiH\imstb_textedit.h" />
-    <ClInclude Include="imguiH\imstb_truetype.h" />
+    <ClInclude Include="GUI\Graphics.hpp" />
+    <ClInclude Include="GUI\MainFrame.hpp" />
     <ClInclude Include="includs.hpp" />
     <ClInclude Include="SimplestFunctions\Constant.hpp" />
     <ClInclude Include="SimplestFunctions\Cosine.hpp" />

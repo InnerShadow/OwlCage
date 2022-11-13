@@ -2,26 +2,23 @@
 
 #include "includs.hpp"
 
-
-#include <d3d11.h>
-#include <tchar.h>
-
-
-
 int main() {
 
     //cout << tgamma(-13.3) << endl;
+
+    Function* difffunction;
 
     try {
         FunctionCombine functioncombine;
         functioncombine.create();
         std::cout << "You're function: " << functioncombine.GetReference() << std::endl;
 
-        Function* function = functioncombine.Getdiff();
+        difffunction = functioncombine.Getdiff();
 
-        std::cout << "func: " << function->GetReference() << std::endl;
+        std::cout << "func: " << difffunction->GetReference() << std::endl;
 
-        std::cout << "Conut: " << function->Count(1) << std::endl;
+        //std::cout << "Conut: " << difffunction->Count(1) << std::endl;
+
 
         //functioncombine.Draw();
 
@@ -45,6 +42,26 @@ int main() {
 
     //     Function* TempFunction = functioncombine.Getdiff();
     //     std::cout << "You're diff: " << TempFunction->GetReference() << std::endl;
+
+        MainFrame mainFrame(1920, 1080);
+        std::cout << "Eter left boartder: ";
+        double leftBoarder = 0.f;
+        std::cin >> leftBoarder;
+
+        std::cout << "Eter right boartder: ";
+        double rightBoarder = 0.f;
+        std::cin >> rightBoarder;
+
+        std::cout << "Eter num of beatings: ";
+        int beatings = 0.f;
+        std::cin >> beatings;
+
+        Graphics graphics(difffunction, leftBoarder, rightBoarder, beatings);
+        mainFrame.SetGraphics(graphics);
+        if (mainFrame.Init()) {
+            mainFrame.MainLoop();
+        }
+
     }
     catch (std::exception* error) {
         std::cout << error->what();
@@ -54,15 +71,7 @@ int main() {
     //     TempFunction = TempFunction->Getdiff();
     //     std::cout << "You're diff: " << TempFunction->GetReference() << std::endl;
     // }
-
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); 
-    (void)io;
-    ImGui::StyleColorsDark();
-    //ImGui_ImplGlfw_InitForOpenGL(window, true);
     
-
 
     return 0;
 }
